@@ -1,0 +1,1 @@
+/usr/bin/c++  -m64 -O3 -DNDEBUG  -m64 -rdynamic CMakeFiles/client.dir/client.cpp.o  -o client 

@@ -1,0 +1,6 @@
+[requires]
+cryptopp/8.7.0
+
+[generators]
+CMakeDeps
+CMakeToolchain

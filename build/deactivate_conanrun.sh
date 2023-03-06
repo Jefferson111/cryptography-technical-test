@@ -1,0 +1,1 @@
+. "/home/user/Desktop/Documents/technical-test/build/deactivate_conanrunenv-release-x86_64.sh"

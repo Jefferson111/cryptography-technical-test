@@ -1,0 +1,1 @@
+. "/home/user/Desktop/Documents/technical-test/build/conanbuildenv-release-x86_64.sh"

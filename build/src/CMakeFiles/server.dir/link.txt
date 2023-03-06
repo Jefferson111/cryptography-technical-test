@@ -1,0 +1,1 @@
+/usr/bin/c++  -m64 -O3 -DNDEBUG  -m64 -rdynamic CMakeFiles/server.dir/server.cpp.o  -o server 

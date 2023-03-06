@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+#include "./headsock.h"
+
+using namespace std;
+
+bool check_state(struct state &s) {
+    // whatever other validating logic goes here
+    return false;
+}
+
+void start() {
+    int sockfd;
+    char buffer[MAXLINE];
+    struct sockaddr_in servaddr, cliaddr;
+    struct state s;
+    struct state old_s;
+    
+    memset(&servaddr, 0, sizeof(servaddr));
+    memset(&cliaddr, 0, sizeof(cliaddr));
+    memset(&s, 0, sizeof(s));
+    memset(&old_s, 0, sizeof(s));
+       
+    setup(sockfd, servaddr);
+    s.EXCHANGE_TYPE = IKE_SA_INIT;
+    for (;;) {
+        size_t l = write(buffer, s, old_s);
+        tx(buffer, l, sockfd, sizeof(cliaddr), &cliaddr);
+        
+        int n = rx(buffer, sockfd, sizeof(cliaddr), &cliaddr);
+        memcpy(&old_s, &s, sizeof(s));
+        read(n, buffer, s);
+        if (check_state(s)) {
+            break;
+        }
+    }
+}
+
+int main(int, char**) {
+    printf("Hello From Client");
+
+    return 0;
+}
