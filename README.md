@@ -108,3 +108,14 @@ conan install .. --output-folder=./ --build=missing
 cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
 cmake --build .
 ```
+
+6. Upon compiling, executables can be found in the `./build` directory, specifically `./build/src`.
+
+# Running the example
+
+`client.cpp` and `server.cpp` are 2 files to show case the Initialization, Re-keying and Fallback protocols.
+
+You should first execute the `server` executable then the `client`.
+The `client` will take on the role of the **initiator** and `server` will be the **responder**.
+
+![example](./docs/images/example.png)
