@@ -119,3 +119,12 @@ You should first execute the `server` executable then the `client`.
 The `client` will take on the role of the **initiator** and `server` will be the **responder**.
 
 ![example](./docs/images/example.png)
+
+# Other Optimizations to consider
+
+1. Re-design cleaner logic with explicit State Transitions for the entire IKE
+2. Async IO model
+3. Parallelization
+4. Memory optimizations to fit cacheline, CPU's cache etc 
+5. Branch Free Programming
+6. XDP/DPDK, RDMA etc
